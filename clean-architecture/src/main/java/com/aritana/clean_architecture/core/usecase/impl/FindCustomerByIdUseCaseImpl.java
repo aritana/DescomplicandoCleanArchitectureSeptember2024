@@ -7,7 +7,7 @@ import com.aritana.clean_architecture.core.usecase.FindCustomerByIdUseCase;
 public class FindCustomerByIdUseCaseImpl implements FindCustomerByIdUseCase {
     private final FindCustomerById findCustomerById;
 
-    public FindCustomerByIdUseCaseImpl(FindCustomerById findCustomerById) {
+    public  FindCustomerByIdUseCaseImpl(FindCustomerById findCustomerById) {
         this.findCustomerById = findCustomerById;
     }
 
