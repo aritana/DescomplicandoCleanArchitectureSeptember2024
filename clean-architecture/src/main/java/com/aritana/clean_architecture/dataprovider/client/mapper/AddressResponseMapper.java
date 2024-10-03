@@ -1,7 +1,7 @@
-package com.aritana.clean_architecture.dataprovider.dataprovider.client.mapper;
+package com.aritana.clean_architecture.dataprovider.client.mapper;
 
 import com.aritana.clean_architecture.core.domain.Address;
-import com.aritana.clean_architecture.dataprovider.dataprovider.client.Response.AddressResponse;
+import com.aritana.clean_architecture.dataprovider.client.Response.AddressResponse;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

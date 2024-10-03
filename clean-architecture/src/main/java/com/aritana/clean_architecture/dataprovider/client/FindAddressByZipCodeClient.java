@@ -1,6 +1,6 @@
-package com.aritana.clean_architecture.dataprovider.dataprovider.client;
+package com.aritana.clean_architecture.dataprovider.client;
 
-import com.aritana.clean_architecture.dataprovider.dataprovider.client.Response.AddressResponse;
+import com.aritana.clean_architecture.dataprovider.client.Response.AddressResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

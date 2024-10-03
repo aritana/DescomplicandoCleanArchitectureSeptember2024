@@ -1,4 +1,4 @@
-package com.aritana.clean_architecture.dataprovider.dataprovider.client.Response;
+package com.aritana.clean_architecture.dataprovider.client.Response;
 
 import lombok.Data;
 

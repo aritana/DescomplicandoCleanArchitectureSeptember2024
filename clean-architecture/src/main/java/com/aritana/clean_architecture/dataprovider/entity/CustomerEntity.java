@@ -1,4 +1,4 @@
-package com.aritana.clean_architecture.dataprovider.dataprovider.repository.entity;
+package com.aritana.clean_architecture.dataprovider.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
