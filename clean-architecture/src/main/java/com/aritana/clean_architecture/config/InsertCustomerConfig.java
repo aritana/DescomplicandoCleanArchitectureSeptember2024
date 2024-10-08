@@ -1,7 +1,5 @@
 package com.aritana.clean_architecture.config;
 
-import com.aritana.clean_architecture.core.dataprovider.FindAddressByZipCode;
-import com.aritana.clean_architecture.core.dataprovider.InsertCustomer;
 import com.aritana.clean_architecture.core.dataprovider.SendCpfForValidation;
 import com.aritana.clean_architecture.core.usecase.impl.InsertCustomerUseCaseImpl;
 import com.aritana.clean_architecture.dataprovider.FindAddressByZipCodeImpl;

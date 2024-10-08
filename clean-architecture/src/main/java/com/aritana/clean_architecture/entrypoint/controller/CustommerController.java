@@ -9,7 +9,6 @@ import com.aritana.clean_architecture.entrypoint.controller.mapper.CustomerMappe
 import com.aritana.clean_architecture.entrypoint.controller.request.CustomerRequest;
 import com.aritana.clean_architecture.entrypoint.controller.response.CustomerResponse;
 import jakarta.validation.Valid;
-import org.apache.kafka.common.protocol.types.Field;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,24 +33,25 @@ public class CustommerController {
     private DeleteCustomerByIdUseCase deleteCustomerByIdUseCase;
 
     @PostMapping
-    public ResponseEntity<Void> insert(@Valid @RequestBody CustomerRequest customerRequest){
+    public ResponseEntity<Void> insert(@Valid @RequestBody CustomerRequest customerRequest) {
         Customer customer = customerMapper.toCustomer(customerRequest);
+
         insertCustomerUseCase.insert(customer, customerRequest.getZipCode());
 
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CustomerResponse> findById(@PathVariable final String id){
+    public ResponseEntity<CustomerResponse> findById(@PathVariable final String id) {
         Customer customer = findCustomerByIdUseCase.find(id);
         CustomerResponse customerResponse = customerMapper.toCustomerResponse(customer);
 
-        return  ResponseEntity.ok().body(customerResponse);
+        return ResponseEntity.ok().body(customerResponse);
     }
 
     @PutMapping("/{id}")
-    public  ResponseEntity<Void> update(@PathVariable final String id,
-                                        @Valid @RequestBody CustomerRequest customerRequest){
+    public ResponseEntity<Void> update(@PathVariable final String id,
+                                       @Valid @RequestBody CustomerRequest customerRequest) {
         Customer customer = customerMapper.toCustomer(customerRequest);
         customer.setId(id);
 
@@ -61,7 +61,7 @@ public class CustommerController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable final String id){
+    public ResponseEntity<Void> delete(@PathVariable final String id) {
         deleteCustomerByIdUseCase.delete(id);
         return ResponseEntity.noContent().build();
     }

@@ -5,4 +5,10 @@ arantes:
 
 spring:
   data:
-    uri:mongodb://localhost:27017/cleanarch
+    mongodb:
+      host: docker-local-mongo-1
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: example
+      database: cleanarch

@@ -1,6 +1,6 @@
 package com.aritana.clean_architecture.config;
 
-import com.aritana.clean_architecture.entrypoint.message.CustomerMessage;
+import com.aritana.clean_architecture.entrypoint.consumer.message.CustomerMessage;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

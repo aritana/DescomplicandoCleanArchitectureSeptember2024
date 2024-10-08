@@ -1,0 +1,10 @@
+https://wiremock.org/docs/download-and-installation/
+ java -jar wiremock-standalone-3.9.1.jar --port 8082
+
+//docker compose up dentro da pasta do intellij
+docker exec -it 09eef77267dc /bin/bash
+mongosh -u root -p
+
+//kafka
+plugin intellij kafkalytic
+

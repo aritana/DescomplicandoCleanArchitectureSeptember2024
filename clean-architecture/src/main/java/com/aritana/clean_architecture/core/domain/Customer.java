@@ -55,7 +55,7 @@ public class Customer {
         return isValidCpf;
     }
 
-    public void setValidCpf(Boolean validCpf) {
+    public void setIsValidCpf(Boolean validCpf) {
         isValidCpf = validCpf;
     }
 }
